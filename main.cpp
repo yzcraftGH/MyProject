@@ -4,7 +4,7 @@
 using namespace std;
 const int lim = 5;
 Student stu[lim];
-//¶¨Òå»¶Ó­½çÃæ
+//å®šä¹‰æ¬¢è¿ç•Œé¢
 void ui()
 {
 	cout << "==================================" << endl;
@@ -17,60 +17,61 @@ void ui()
 	system("pause");
 	system("cls");
 }
-//¶¨Òå¿ª·¢ÈËÔ±ÁĞ±í
+//å®šä¹‰å¼€å‘äººå‘˜åˆ—è¡¨
 void programmer()
 {
-	cout << "¿ª·¢ÈËÔ±ÁĞ±í£º" << endl;
+	cout << "å¼€å‘äººå‘˜åˆ—è¡¨ï¼š" << endl;
 	cout << "================" << endl;
 	cout << "|              |" << endl;
-	cout << "|     ÓàÕğ     |" << endl;
+	cout << "|     ä½™éœ‡     |" << endl;
 	cout << "|              |" << endl;
 	cout << "================" << endl;
 	system("pause");
 	system("cls");
 }
-//¶¨Òå¸üĞÂÈÕÖ¾
+//å®šä¹‰æ›´æ–°æ—¥å¿—
 void updateData()
 {
-	cout << "=======¸üĞÂÈÕÖ¾=======" << endl;
-	cout << "1.Ê¹ÓÃÁËÀàÀ´½øĞĞÅÅĞò" << endl;
-	cout << "2.½«ÎÄ¼ş·Ö¿ª´¢´æÎª£ºStudent.h | Student.cpp | main.cpp" << endl;
-	cout << "3.ÓÅ»¯Á÷³Ì,¼õÉÙÁËgotoÖ¸ÁîµÄÊ¹ÓÃÒÔ¼°ÔÚÁ÷³ÌÑ¡ÔñÖĞÊ¹ÓÃIF-ELSE IF ---ELSE" << endl;
+	cout << "=======æ›´æ–°æ—¥å¿—=======" << endl;
+	cout << "1.ä½¿ç”¨äº†ç±»æ¥è¿›è¡Œæ’åº" << endl;
+	cout << "2.å°†æ–‡ä»¶åˆ†å¼€å‚¨å­˜ä¸ºï¼šStudent.h | Student.cpp | main.cpp" << endl;
+	cout << "3.ä¼˜åŒ–æµç¨‹,å‡å°‘äº†gotoæŒ‡ä»¤çš„ä½¿ç”¨ä»¥åŠåœ¨æµç¨‹é€‰æ‹©ä¸­ä½¿ç”¨IF-ELSE IF ---ELSE" << endl;
+	cout << "4.ç§»é™¤äº†herobrine." << endl;
 	system("pause");
 	system("cls");
 }
-//Ê¹ÓÃÀà·½·¨½øĞĞÅÅÃû
+//ä½¿ç”¨ç±»æ–¹æ³•è¿›è¡Œæ’å
 void scoreSorting()
 {
 
 	
-	cout << "ÅÅÃûÇ°£º" << endl;
+	cout << "æ’åå‰ï¼š" << endl;
 	Student::show(stu);
 	system("pause");
 	system("cls");
 	Student::sort(stu);
-	cout << "ÅÅÃûºó" << endl;
+	cout << "æ’åå" << endl;
 	Student::show(stu);
 	system("pause");
 	system("cls");
 }
-//ÉèÖÃ±¸×¢
+//è®¾ç½®å¤‡æ³¨
 void setStuInfo()
 {
 	Student::setInfo(stu);
 }
-//ÏÔÊ¾ËùÓĞĞÅÏ¢
+//æ˜¾ç¤ºæ‰€æœ‰ä¿¡æ¯
 void mainShowInfo()
 {
 	Student::showInfo(stu);
 }
-//Ìí¼ÓĞÕÃûµÈĞÅÏ¢
+//æ·»åŠ å§“åç­‰ä¿¡æ¯
 void AddInfo()
 {
 	Student::add(stu);
 }
 
-//³ÌĞòÔËĞĞÖ÷Ìå
+//ç¨‹åºè¿è¡Œä¸»ä½“
 void body()
 {
 	ui();
@@ -78,7 +79,7 @@ void body()
 	string passwd;
 	while (true)
 	{
-		//ÃÜÂëÏµÍ³-Èç¹ûÕËºÅÃÜÂëÑéÖ¤²»Í¨¹ı£¬ÔòÑ­»·ÏÔÊ¾´Ë½çÃæ
+		//å¯†ç ç³»ç»Ÿ-å¦‚æœè´¦å·å¯†ç éªŒè¯ä¸é€šè¿‡ï¼Œåˆ™å¾ªç¯æ˜¾ç¤ºæ­¤ç•Œé¢
 		cout << "enter your username:";
 		cin >> username;
 		cout << "enter your password:";
@@ -87,16 +88,16 @@ void body()
 		{
 			system("cls");
 			int cho;
-			//Ñ­»·Ö÷Ìå °´0ÍË³ö
+			//å¾ªç¯ä¸»ä½“ æŒ‰0é€€å‡º
 			while (true)
 			{
-				cout << "°´ 1 ¿ªÊ¼ÅÅÃû(ÏÈ°´ 6 Ìí¼Ó»ù±¾ĞÅÏ¢£¡)" << endl;
-				cout << "°´ 2 ²é¿´¿ª·¢ÕßÁĞ±í" << endl;
-				cout << "°´ 3 ²é¿´¸üĞÂÈÕÖ¾" << endl;
-				cout << "°´ 4 ±¸×¢Ñ§ÉúĞÅÏ¢(ÏÈ°´ 6 Ìí¼Ó»ù±¾ĞÅÏ¢£¡)" << endl;
-				cout << "°´ 5 ÏÔÊ¾Ñ§ÉúËùÓĞĞÅÏ¢(ÏÈ°´ 6 Ìí¼Ó»ù±¾ĞÅÏ¢£¡)" << endl;
-				cout << "°´ 6 Ìí¼ÓĞÕÃû·ÖÊıµÈĞÅÏ¢" << endl;
-				cout << "°´ 0 ÍË³ö" << endl;
+				cout << "æŒ‰ 1 å¼€å§‹æ’å(å…ˆæŒ‰ 6 æ·»åŠ åŸºæœ¬ä¿¡æ¯ï¼)" << endl;
+				cout << "æŒ‰ 2 æŸ¥çœ‹å¼€å‘è€…åˆ—è¡¨" << endl;
+				cout << "æŒ‰ 3 æŸ¥çœ‹æ›´æ–°æ—¥å¿—" << endl;
+				cout << "æŒ‰ 4 å¤‡æ³¨å­¦ç”Ÿä¿¡æ¯(å…ˆæŒ‰ 6 æ·»åŠ åŸºæœ¬ä¿¡æ¯ï¼)" << endl;
+				cout << "æŒ‰ 5 æ˜¾ç¤ºå­¦ç”Ÿæ‰€æœ‰ä¿¡æ¯(å…ˆæŒ‰ 6 æ·»åŠ åŸºæœ¬ä¿¡æ¯ï¼)" << endl;
+				cout << "æŒ‰ 6 æ·»åŠ å§“ååˆ†æ•°ç­‰ä¿¡æ¯" << endl;
+				cout << "æŒ‰ 0 é€€å‡º" << endl;
 				while (1)
 				{
 					cin >> cho;
@@ -106,8 +107,8 @@ void body()
 					}
 					else
 					{
-						cout << "·Ç·¨µÄÊäÈëÄÚÈİ" << endl;
-						cin.clear();//±ê¼ÇcinÎªÕıÈ·Ê¹Æä¿ÉÔÙ´ÎÊäÈë
+						cout << "éæ³•çš„è¾“å…¥å†…å®¹" << endl;
+						cin.clear();//æ ‡è®°cinä¸ºæ­£ç¡®ä½¿å…¶å¯å†æ¬¡è¾“å…¥
 						while (cin.get() != '\n')
 						{
 							continue;
@@ -142,32 +143,32 @@ void body()
 				}
 				else if (cho == 0)
 				{
-					//ÍË³öÄÚ²ãÑ­»·
+					//é€€å‡ºå†…å±‚å¾ªç¯
 					break;
 				}
 				else
 				{
-					cout << "±í´ïÊ½´íÎó£¡" << endl;
+					cout << "è¡¨è¾¾å¼é”™è¯¯ï¼" << endl;
 					system("pause");
 					system("cls");
 				}
 			}
-			//ÍË³öÍâ²ãÑ­»·
+			//é€€å‡ºå¤–å±‚å¾ªç¯
 			break;
 		}
 		else
 		{
-			//ÃÜÂë´íÎóµÄÌáÊ¾Óï
+			//å¯†ç é”™è¯¯çš„æç¤ºè¯­
 			cout << "Wrong username or passworld." << endl;
 			system("pause");
 			system("cls");
 		}
 	}
 }
-//MAINº¯Êı
+//MAINå‡½æ•°
 int main()
 {
-	//µ÷ÓÃbody()ÔËĞĞ
+	//è°ƒç”¨body()è¿è¡Œ
 	body();
 	
 	return 0;
